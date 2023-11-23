@@ -22,3 +22,12 @@ spec:
       subscriptionID: bca39324-6ddb-4c27-b96f-e92dac425abf
       sendFinished: false
       sendStarted: false
+    - type: sh.keptn.event.deploy-qms-env.triggered
+      requests:
+        - url: http://admin:113f268598d37f7474c6207eefabe32752@34.34.175.69:8080/job/deploy-qms-env/buildWithParameters?keptnProject={{.data.project}}&keptnService={{.data.service}}&keptnStage={{.data.stage}}&keptnContext={{.shkeptncontext}}&keptnId={{.id}}&keptnGitId={{.gitcommitid}}&keptnTask=deploy-qms-env
+          payload: ""
+          headers: []
+          method: POST
+      subscriptionID: 5c526b68-7127-4a68-9622-1a0c682d44a2
+      sendFinished: false
+      sendStarted: false
