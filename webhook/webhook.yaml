@@ -1,0 +1,15 @@
+apiVersion: webhookconfig.keptn.sh/v1beta1
+kind: WebhookConfig
+metadata:
+  name: webhook-configuration
+spec:
+  webhooks:
+    - type: sh.keptn.event.compile.triggered
+      requests:
+        - url: http://admin:113f268598d37f7474c6207eefabe32752@34.34.175.69:8080/job/compile-dev/buildWithParameters?keptnProject={{.data.project}}&keptnService={{.data.service}}&keptnStage={{.data.stage}}&keptnContext={{.shkeptncontext}}&keptnId={{.id}}&keptnGitId={{.gitcommitid}}&keptnTask=compile
+          payload: ""
+          headers: []
+          method: POST
+      subscriptionID: c1c003fc-f40d-418d-8d5e-d51c7040d0b3
+      sendFinished: false
+      sendStarted: false
